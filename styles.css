@@ -18,7 +18,7 @@ p {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
-    background-color: #0d0d0d;
+    background-color: #252323;
     color: #f0f0f0;
 }
 .banner {
@@ -52,7 +52,7 @@ body {
 }
 nav.sitenavigation {
     text-align: center;
-    background-color: #000000;  
+    background-color: #0d0d0d;  
     box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 nav.sitenavigation p {
