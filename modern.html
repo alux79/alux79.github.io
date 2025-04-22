@@ -9,6 +9,11 @@
   <meta http-equiv="Expires" content="0" />
 </head>
 <body>
+  <header class="banner">
+    <h1>
+      The Place of Tradition in Cambodian Education
+    </h1>
+  </header>
   <nav class="sitenavigation">
     <p><a href="index.html">Introduction</a></p>
     <p><a href="values.html">Traditional & Core Values</a></p>
@@ -16,6 +21,87 @@
     <p><a href="voices.html">Voices from My Family</a></p>
     <p><a href="forward.html">Looking Forward</a></p>
   </nav>
-  there's nothing here yet.
+  <h1 class="title">Tension from Modern Education</h1>
+  <main class="container">
+    <div class="section">
+      <div class = "text">
+        <h2>Contrasting Ideas</h2>
+        <p>
+          Cambodia’s education system is constantly modernizing through new teaching strategies, curriculum updates, international influence, and expanding access to technology. These changes are meant to prepare students for a globalized, fast moving world. But as schools shift toward modern methods, they also begin to drift further from long standing cultural values. In many cases, the core beliefs behind traditional and modern education are not just different, but they pull in opposite directions. This growing tension raises tough questions about how far reform can go before something is left behind.
+        </p>
+      </div>
+    </div>
+    <div class="section">
+      <div class="accordion-list">
+        <h2>Modern Values in Conflict</h2>
+        <div class="accordion-item">
+          <button class="accordion-toggle">Critical Thinking</button>
+          <div class="accordion-content">
+            <p><strong>Modern View:</strong> Encourages students to analyze, question, and evaluate. Knowledge is something to explore, not just accept.</p>
+            <p><strong>Conflict:</strong> Questioning a teacher can seem disrespectful. The focus on authority may limit curiosity and dialogue.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-toggle">Individual Expression</button>
+          <div class="accordion-content">
+            <p><strong>Modern View:</strong> Supports identity, opinions, and creativity. Helps students find and use their voice.</p>
+            <p><strong>Conflict:</strong> Traditional values emphasize harmony and group unity. Standing out might seem selfish or disruptive.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-toggle">Student-Centered Learning</button>
+          <div class="accordion-content">
+            <p><strong>Modern View:</strong> Adapts to each learner’s needs. Teachers act as guides, not authorities.</p>
+            <p><strong>Conflict:</strong> Traditional classrooms rely on control and structure. Shifting the power dynamic can feel uncomfortable.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-toggle">Inquiry-Based Learning</button>
+          <div class="accordion-content">
+            <p><strong>Modern View:</strong> Prioritizes curiosity, real-world problem-solving, and learning by doing.</p>
+            <p><strong>Conflict:</strong> Cambodian schools often favor memorization and repetition. Open-ended questioning may seem inefficient.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-toggle">Innovation</button>
+          <div class="accordion-content">
+            <p><strong>Modern View:</strong> Embraces change, uses technology, and prepares students for the future.</p>
+            <p><strong>Conflict:</strong> Traditional systems value repetition and predictability. Innovation can feel risky or like abandoning roots.</p>
+          </div>
+        </div>
+      </div>    
+    </div>
+    <div class="section">
+      <div class = "text">
+        <h2>What to do?</h2>
+        <p>
+          If the values of modern education so often clash with traditional ones, then what happens next? As Cambodia continues to modernize, it arrives at an intersection of change. Will traditional values still have a place in classrooms shaped by critical thinking, student voice, and rapid technological change? Or will they slowly fade, seen as incompatible with progress?
+        </p>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+  <script>
+    document.querySelectorAll('.accordion-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+        const item = button.closest('.accordion-item');
+        const content = item.querySelector('.accordion-content');
+
+        if (item.classList.contains('open')) {
+            // Closing
+            content.style.maxHeight = 0;
+            content.style.paddingTop = '0';
+            content.style.paddingBottom = '0';
+            item.classList.remove('open');
+        } else {
+            // Opening
+            content.style.maxHeight = content.scrollHeight + 'px';
+            content.style.paddingTop = '1rem';
+            content.style.paddingBottom = '1rem';
+            item.classList.add('open');
+        }
+        });
+    });
+  </script>  
 </body>
 </html>
