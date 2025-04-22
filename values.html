@@ -6,6 +6,11 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="banner">
+    <h1>
+      The Place of Tradition in Cambodian Education
+    </h1>
+  </header>
   <nav class="sitenavigation">
     <p><a href="index.html">Introduction</a></p>
     <p><a href="values.html">Traditional & Core Values</a></p>
@@ -13,6 +18,127 @@
     <p><a href="voices.html">Voices from My Family</a></p>
     <p><a href="forward.html">Looking Forward</a></p>
   </nav>
-  there's nothing here yet.
+  <h1 class="title">Traditional & Core Values</h1>
+  <main class="container">
+    <div class="section">
+      <div class = "text">
+        <h2>Importance of Traditional Values</h2>
+        <p>
+          Before looking into the place of traditional values, it’s important to understand how they have traditionally guided Cambodian education. These aren’t just abstract ideas, they shape how classrooms are run, how students relate to teachers, and even how success is defined.
+        </p>
+      </div>
+    </div>
+    <div class="carousel-container">
+      <div class="carousel">
+        <button id="prevBtn">&#8592;</button>
+  
+        <div id="carouselContent" class="carousel-slide">
+          <!-- JS will load content here -->
+        </div>
+  
+        <button id="nextBtn">&#8594;</button>
+      </div>
+    </div>
+    <div class="section">
+      <div class = "text">
+        <h2>Importance of Traditional Values</h2>
+        <p>
+          Looking at the benefits and challenges of these values side by side, it is clear that tradition in Cambodian education is not inherently good or bad, rather it depends on context. These values provided stability and moral grounding but they will sometimes limit curiosity or reinforce rigid roles. However, rather than discarding these values, a more valuable action may be to integrate.
+        </p>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+  <script>
+    const values = [ {
+    title: "Collectivism",
+    content: `
+      Benefits:
+      <ul>
+        <li>Builds a strong sense of unity and peer accountability</li>
+        <li>Encourages students to help each other and not just compete</li>
+        <li>Promotes the good of all over self-promotion</li>
+      </ul>
+      Challenges:
+      <ul>
+        <li>Limits personal expression and innovation</li>
+        <li>Individual skills and talent may be unnoticed</li>
+        <li>Students may be afraid to speak out against a group</li>
+      </ul>
+      `
+    },
+    {
+      title: "Respect for Authority",
+      content: `
+        Benefits
+        <ul>
+          <li>Maintains order and reduces conflict within the classroom</li>
+          <li>Reinforces values and discipline</li>
+          <li>Preserves cultural norms</li>
+        </ul>
+        Challenges:
+        <ul>
+          <li>Students may be afraid to ask questions or offer opinions</li>
+          <li>Limits new ideas or feedback</li>
+          <li>May suggest authoritarian teaching styles</li>
+        </ul>
+      `
+    },
+    {
+      title: "Hierarchy",
+      content: `
+        Benefits
+        <ul>
+          <li>Encourages responsibility in older students</li>
+          <li>Supports respect and courtesy in peer relationships</li>
+          <li>Can offer a natural mentoring structure</li>
+        </ul>
+        Challenges:
+        <ul>
+          <li>Reinforces rigid power dynamics</li>
+          <li>Gender and age hierarchies may feel outdated or unfair</li>
+          <li>Makes equality-based teaching harder to implement</li>
+        </ul>
+      `
+    },
+    {
+      title: "Discipline",
+      content: `
+        Benefits:
+        <ul>
+          <li>Helps students develop patience, perseverance, and accountability</li>
+          <li>Maintains a calm and focused classroom environment</li>
+          <li>Encourages respect for the learning process and authority figures</li>
+        </ul>
+        Challenges:
+        <ul>
+          <li>May discourage open discussion or risk-taking</li>
+          <li>Strict enforcement can feel punishing or inflexible</li>
+          <li>Can make learning feel like a duty rather than a curiosity</li>
+        </ul>
+      `
+    }
+  ];
+
+  let currentIndex = 0;
+  const contentDiv = document.getElementById("carouselContent");
+
+  function updateCarousel() {
+    const { title, content } = values[currentIndex];
+    contentDiv.innerHTML = `<h2>${title}</h2>${content}`;
+  }
+
+  document.getElementById("prevBtn").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + values.length) % values.length;
+    updateCarousel();
+  });
+
+  document.getElementById("nextBtn").addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % values.length;
+    updateCarousel();
+  });
+
+  updateCarousel();
+  </script>  
 </body>
 </html>
