@@ -367,4 +367,11 @@ footer {
     height: auto;
     border-radius: 10px;
 }
-  
+
+/* citation */
+
+.text .citation {
+    display: block;
+    margin-left: 2em;
+    text-indent: -2em;
+}  
