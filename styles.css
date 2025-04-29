@@ -18,9 +18,38 @@ p {
 body { /* add an image texture to the side bars */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
-    background-color: #d9cccc;
     color: #f3ecec;
+    background-color: #d9cccc; /* backup */
 }
+
+/*background images*/
+.index {
+    background-image: url('images/Siem-Reap-Cambodia-Timbuktu-h1.png');
+    background-position: center center;
+    background-size: 100% auto;
+}
+.values {
+    background-image: url('images/tree.jpg');
+    background-position: center center;
+    background-size: 100% auto;
+}
+.modern {
+    background-image: url('images/cityBackground.jpg');
+    background-position: top center;
+    background-size: 100% auto;
+}
+.voices {
+    background-image: url('images/marketBackground.jpg');
+    background-position: center center;
+    background-size: 100% auto;
+}
+.forward {
+    background-image: url('images/angkor.jpg');
+    background-position: left center;
+    background-size: 100% auto;
+}
+
+
 .banner {
     position: relative;
     width: 100%;
@@ -50,6 +79,7 @@ body { /* add an image texture to the side bars */
     text-shadow: 2px 2px 5px lightcoral;
     font-size: 3.4vw;
 }
+
 nav.sitenavigation {
     text-align: center;
     background-color: #0d0d0d;  
@@ -79,15 +109,15 @@ nav.sitenavigation a:active {
     padding: 0.1em;
     background-color: #7c1d1d;
 }
+
 .container {
-    width: 100%;
-    max-width: 1200px;
+    width: 80%;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
     background-color: #B63A21;
     box-sizing: border-box;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    text-align: justify;
 }
 .title {
     background-color: #1D456A;
@@ -104,6 +134,7 @@ nav.sitenavigation a:active {
     padding: 20px;
     background-color: #7c1d1d;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
 }
 .section.inverted {
     flex-direction: row-reverse;
@@ -118,28 +149,26 @@ nav.sitenavigation a:active {
 .text p {
     text-indent: 2em;
 }
-.section.inverted.text {
-    margin: 0px 30px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-}
 .image-wrapper {
-    max-width: 300px;
-    width: 100%;
+    margin: 5px -20px 0px 5px;
+    max-width: 350px;
+    width: 90%;
 }
 .image-wrapper img {
-    width: 100%;
+    width: 90%;
     height: auto;
     border-radius: 10px;
 }  
 figcaption {
     text-align: center;
     margin-top: 10px;
+    margin-right: 23px;
     color: white;
     font-size: 0.9em;
 }
 h2 {
     font-size: 22px;
-    margin: 0px;
+    margin-bottom: 10px;
 }
 footer {
     text-align: center;
@@ -163,9 +192,9 @@ footer {
     background-color: #7c1d1d;
     border-radius: 10px;
     padding: 25px;
-    height: 300px;
-    width: 55%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: auto;
+    max-width: 65%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
     text-align: left;
     font-size: 18px;
     background-color: #163a57;
@@ -258,17 +287,84 @@ footer {
     border-radius: 10px;
     text-align: left;
 }
-.column-container {
+
+.vertical-carousel {
     display: flex;
-    gap: 40px;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 80%; /* Match your container */
+    margin: 35px auto 20px;
 }
-.column-container ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    flex: 1;
+
+.carousel-window {
+    overflow: hidden;
+    height: 80px; /* Show almost 1.5 items */
+    width: 100%;
+    position: relative;
 }
-.column-container li {
+.carousel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.5s ease;
+}
+.carousel-list li {
+    height: 80px; /* Visible height of one item */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     font-size: 18px;
-    padding: 10px;
+    padding: 10px 20px;
+    box-sizing: border-box;
 }
+.carousel-button {
+    background: none;
+    border: none;
+    font-size: 2.5em;
+    color: #f0f0f0;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+}
+.carousel-button:hover {
+    color: #e63946;
+    transform: scale(1.2);
+}
+.two-carousels {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.two-carousels .text {
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+.two-carousels h2 {
+    text-align: center;
+}
+
+/* looking forward specific */
+.looking-forward-page .section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+}  
+.looking-forward-page .text {
+    flex: 1 1 300px;
+    min-width: 250px;
+} 
+.looking-forward-page .image-wrapper {
+    flex: 0 1 300px;
+    max-width: 300px;
+    margin: 0;
+}
+.looking-forward-page .image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+  

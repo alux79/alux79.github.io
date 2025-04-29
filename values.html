@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?=v3">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
 </head>
-<body>
+<body class="values">
   <header class="banner">
     <h1>
       The Place of Tradition in Cambodian Education
@@ -20,6 +20,7 @@
     <p><a href="modern.html">Tension from Modern Education</a></p>
     <p><a href="voices.html">Voices from My Family</a></p>
     <p><a href="forward.html">Looking Forward</a></p>
+    <p><a href="sources.html">Sources</a></p>
   </nav>
   <h1 class="title">Traditional & Core Values</h1>
   <main class="container">
@@ -27,9 +28,12 @@
       <div class = "text">
         <h2>Importance of Traditional Values</h2>
         <p>
-          Before looking into the place of traditional values, it’s important to understand how they have traditionally guided Cambodian education. These aren’t just abstract ideas, they shape how classrooms are run, how students relate to teachers, and even how success is defined.
-        </p>
+          How much should tradition affect education in a quickly modernizing world? Forming an understanding of the role of traditional values in both the past and present is necessary to ponder the complexity of current educational reforms. For a while, Cambodian education has been guided by values like collectivism, respect for authority, social hierarchy, risk avoidance (Berkvens, 2017). These values are deeply rooted in Cambodia’s heritage, and have greatly defined the educational environment of Cambodia. However, these ideas conflict and take pressure from modernized and individualistic learning models (Heng & Koemhong, 2022). This brings the question, are traditional values still effective in today’s environment? Can these values be evolved to better fit the educational landscape?</p>
       </div>
+      <figure class="image-wrapper">
+        <img src="images/hofstede.jpg" alt="Hofstede's Cultural Dimensions">
+        <figcaption>Hofstede's Cultural Dimensions</figcaption>
+      </figure>
     </div>
     <div class="carousel-container">
       <div class="carousel">
@@ -44,84 +48,84 @@
     </div>
     <div class="section">
       <div class = "text">
-        <h2>Importance of Traditional Values</h2>
+        <h2>Adapting Traditional Values</h2>
         <p>
-          Looking at the benefits and challenges of these values side by side, it is clear that tradition in Cambodian education is not inherently good or bad, rather it depends on context. These values provided stability and moral grounding but they will sometimes limit curiosity or reinforce rigid roles. However, rather than discarding these values, a more valuable action may be to integrate.
-        </p>
+          Looking at these values closely, we see none of them being entirely beneficial or inherently harmful. Much of the influence that these values hold depend on context and how they’re implemented. The values like respect for authority and risk avoidance definitely facilitate stability, accountability, and community, which are no doubt important in both personal and academic growth (Purwaningsih & Ridha, 2024; Chaika, 2021). Nevertheless, these same traditions can harm the same growth and progress by discouraging critical thinking, individual expression, and innovation (Sen 2022). This is where the real question is, not determining if these values belong, but rather how can they be meaningfully adapted. Ideally, respect can exist without suppressing inquiry, creativity should be encouraged, but that doesn’t mean we won’t have stability, many values should be able to coexist.        </p>
       </div>
     </div>
   </main>
   <footer></footer>
   <script>
-    const values = [ {
-    title: "Collectivism",
-    content: `
-      Benefits:
-      <ul>
-        <li>Builds a strong sense of unity and peer accountability</li>
-        <li>Encourages students to help each other and not just compete</li>
-        <li>Promotes the good of all over self-promotion</li>
-      </ul>
-      Challenges:
-      <ul>
-        <li>Limits personal expression and innovation</li>
-        <li>Individual skills and talent may be unnoticed</li>
-        <li>Students may be afraid to speak out against a group</li>
-      </ul>
+    const values = [{
+      title: "Collectivism",
+      content: `
+        Benefits:
+        <ul>
+          <li>Fosters unity and peer accountability</li>
+          <li>Encourages collaboration rather than individual competition</li>
+          <li>Promotes community interests above self-interest</li>
+        </ul>
+        Challenges:
+        <ul>
+          <li>May limit personal expression and innovation</li>
+          <li>Individual skills and talents can be overlooked</li>
+          <li>Students might hesitate to voice dissenting opinions</li>
+        </ul>
       `
     },
     {
       title: "Respect for Authority",
       content: `
-        Benefits
+        Benefits:
         <ul>
-          <li>Maintains order and reduces conflict within the classroom</li>
-          <li>Reinforces values and discipline</li>
-          <li>Preserves cultural norms</li>
+          <li>Maintains order and reduces classroom conflict</li>
+          <li>Reinforces cultural values and discipline</li>
+          <li>Preserves traditional social norms</li>
         </ul>
         Challenges:
         <ul>
-          <li>Students may be afraid to ask questions or offer opinions</li>
-          <li>Limits new ideas or feedback</li>
-          <li>May suggest authoritarian teaching styles</li>
+          <li>Students may fear asking questions or voicing opinions</li>
+          <li>Can discourage innovative thinking and constructive criticism</li>
+          <li>May lead to authoritarian teaching styles</li>
         </ul>
       `
     },
     {
       title: "Hierarchy",
       content: `
-        Benefits
+        Benefits:
         <ul>
-          <li>Encourages responsibility in older students</li>
-          <li>Supports respect and courtesy in peer relationships</li>
-          <li>Can offer a natural mentoring structure</li>
+          <li>Encourages older students to take responsibility and mentor others</li>
+          <li>Supports respectful and courteous peer interactions</li>
+          <li>Provides structured roles and clear expectations</li>
         </ul>
         Challenges:
         <ul>
-          <li>Reinforces rigid power dynamics</li>
-          <li>Gender and age hierarchies may feel outdated or unfair</li>
-          <li>Makes equality-based teaching harder to implement</li>
+          <li>Reinforces rigid power dynamics within groups</li>
+          <li>May perpetuate outdated gender or age-based inequalities</li>
+          <li>Can hinder the implementation of equality-focused teaching methods</li>
         </ul>
       `
     },
     {
-      title: "Discipline",
+      title: "Risk Avoidance/Stability",
       content: `
         Benefits:
         <ul>
-          <li>Helps students develop patience, perseverance, and accountability</li>
-          <li>Maintains a calm and focused classroom environment</li>
-          <li>Encourages respect for the learning process and authority figures</li>
+          <li>Ensures consistency and predictability in the learning environment</li>
+          <li>Protects students from unnecessary conflicts and disruptions</li>
+          <li>Creates a sense of security and emotional comfort</li>
         </ul>
         Challenges:
         <ul>
-          <li>May discourage open discussion or risk-taking</li>
-          <li>Strict enforcement can feel punishing or inflexible</li>
-          <li>Can make learning feel like a duty rather than a curiosity</li>
+          <li>May discourage students from experimenting or taking intellectual risks</li>
+          <li>Could slow adaptation to new or progressive educational methods</li>
+          <li>Might limit the development of critical thinking and problem-solving skills</li>
         </ul>
       `
     }
   ];
+
 
   let currentIndex = 0;
   const contentDiv = document.getElementById("carouselContent");
